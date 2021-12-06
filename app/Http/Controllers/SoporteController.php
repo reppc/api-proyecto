@@ -37,8 +37,8 @@ class SoporteController extends Controller
     public function store(Request $request)
     {
          $soporte = new Soporte();
-        $soporte->pregunta=$request->pregunta;
-        $soporte->pregunta=$request->pregunta;
+         $soporte->Pregunta=$request->Pregunta;
+        $soporte->Descripcion=$request->Descripcion;
         
 
         $soporte->save();
@@ -77,7 +77,7 @@ class SoporteController extends Controller
     {
         $soporte= Soporte::findOrFail($request->id);
          $soporte->pregunta=$request->pregunta;
-        $soporte->pregunta=$request->pregunta;
+        $soporte->descripcion=$request->descripcion;
 
         $soporte->save();
          return $soporte;

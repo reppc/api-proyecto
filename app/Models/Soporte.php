@@ -9,8 +9,8 @@ class Soporte extends Model
 {
     use HasFactory;
      protected $fillable = [
-        'pregunta',
-        'descripcion',
+        'Pregunta',
+        'Descripcion',
         
     ];
 }
