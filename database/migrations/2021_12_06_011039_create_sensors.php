@@ -15,10 +15,15 @@ class CreateSensors extends Migration
     {
         Schema::create('sensors', function (Blueprint $table) {
            $table->id();
-            $table->string('Pregunta');
-            $table->string('Descripcion');
+           
+            $table->string('nombre');
+            $table->string('ubicacion');
 
             $table->timestamps();
+            $table->foreignId('user_id')
+            ->nullable()
+            ->constrained('users')
+            ->nullOnDelete();
         });
     }
 
