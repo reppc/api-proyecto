@@ -25,7 +25,7 @@ class CreateHistorials extends Migration
             
             $table->foreignId('sensor_id')
             ->nullable()
-            ->constrained('sensor')
+            ->constrained('sensors')
             ->nullOnDelete();
         });
     }

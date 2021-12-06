@@ -16,6 +16,7 @@ class Historial extends Model
 'hora_final',
 'estado',
 'descripcion',
+'sensor_id',
     ];
      public function usuarios()
     {
