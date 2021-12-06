@@ -91,7 +91,7 @@ class SoporteController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        $soporte=  Soporte::destroy($request->$id);
+        $soporte=  Soporte::destroy($id);
         return $soporte;
     }
 }

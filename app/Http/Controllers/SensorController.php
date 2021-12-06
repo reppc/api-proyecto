@@ -92,7 +92,7 @@ class SensorController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        $sensor=  Sensor::destroy($request->$id);
+        $sensor=  Sensor::destroy($id);
         return $sensor;
     }
 }

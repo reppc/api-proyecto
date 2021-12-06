@@ -99,7 +99,7 @@ class HistorialController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        $historial=  Historial::destroy($request->$id);
+        $historial=  Historial::destroy($id);
         return $historial;
     }
 }
