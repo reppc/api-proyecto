@@ -76,8 +76,8 @@ class SoporteController extends Controller
     public function update(Request $request, $id)
     {
         $soporte= Soporte::findOrFail($request->id);
-         $soporte->pregunta=$request->pregunta;
-        $soporte->descripcion=$request->descripcion;
+         $soporte->Pregunta=$request->Pregunta;
+        $soporte->Descripcion=$request->Descripcion;
 
         $soporte->save();
          return $soporte;
