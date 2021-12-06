@@ -43,6 +43,7 @@ class HistorialController extends Controller
          $historial->hora_final=$request->hora_final;
           $historial->estado=$request->estado;
            $historial->descripcion=$request->descripcion;
+           $historial->sensor_id=$request->sensor_id;
 
         $historial->save();
     }

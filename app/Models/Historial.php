@@ -22,4 +22,5 @@ class Historial extends Model
     {
         return $this->belongsToMany(Sensor::class,'id');
     }
+    public $timestamps = false;
 }
