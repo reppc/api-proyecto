@@ -39,3 +39,12 @@ Route::get('/soporte','App\Http\Controllers\SoporteController@index');
 Route::post('/soporte','App\Http\Controllers\SoporteController@store');
 Route::post('/soporte/{id}','App\Http\Controllers\SoporteController@update');
 Route::delete('/soporte/{id}','App\Http\Controllers\SoporteController@destroy');
+
+Route::post('register', 'App\Http\Controllers\UsuariosController@register');
+Route::post('login', 'App\Http\Controllers\UsuariosController@authenticate');
+
+Route::group(['middleware' => ['jwt.verify']], function() {
+
+    Route::post('user','App\Http\Controllers\UsuariosController@getAuthenticatedUser');
+
+});
